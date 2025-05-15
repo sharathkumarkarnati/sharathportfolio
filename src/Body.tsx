@@ -114,7 +114,17 @@ const About = () => {
 const aboutItems = [
   {
     subheader: "Programming Languages",
-    items: ["JavaScript", "Python", "C#", "C++", "R"],
+    items: [
+      "Python",
+      "Java",
+      "JavaScript",
+      "TypeScript",
+      "C++",
+      "C#"
+      "R",
+      "HTML",
+      "CSS",
+    ],
   },
   {
     subheader: "Frameworks & Libraries",
@@ -123,47 +133,69 @@ const aboutItems = [
       "Node.js",
       "Express.js",
       "Redux",
-      "Bootstrap",
-      "Tailwind CSS",
-      "SASS",
-      "jQuery",
+      "Django",
       "Pandas",
-      "Numpy",
-      "Matplotlib",
-      "Pytorch",
+      "NumPy",
       "Scikit-learn",
+      "PyTorch",
       "TensorFlow",
-      "Keras",
-      "OpenCV",
     ],
   },
   {
-    subheader: "Cloud & Database Technologies",
-    items: ["AWS", "Azure", "Docker", "MySQL", "MongoDB", "PostgreSQL", "SQL"],
+    subheader: "Database & Cloud",
+    items: [
+      "PostgreSQL",
+      "MongoDB",
+      "MySQL",
+      "SQL",
+      "AWS (S3, Lambda, EC2)",
+      "Azure",
+      "Kubernetes",
+      "CI/CD",
+    ],
   },
   {
-    subheader: "Tools & Technologies",
+    subheader: "Tools & DevOps",
     items: [
       "Git",
-      "Jenkins",
       "Docker",
-      "Tableau",
-      "Jupyter Notebook",
-      "MS Excel",
-      "Office 365",
-      "VS Code",
       "Postman",
+      "Jenkins",
+      "Maven",
+      "Ansible",
+      "VS Code",
+      "IntelliJ",
+      "Power BI",
+      "Tableau",
+      "MS Excel",
+      "Figma",
+    ],
+  },
+  {
+    subheader: "Development Practices",
+    items: [
+      "Agile",
+      "SDLC",
+      "TDD",
+      "SOLID Principles",
+      "Microservices",
+      "Design Patterns",
+      "Documentation",
+      "Version Control",
     ],
   },
   {
     subheader: "Operating Systems",
-    items: ["MacOS", "Windows", "Linux"],
+    items: ["Windows", "Linux", "MacOS"],
   },
 ];
+
 
 const Experience = () => {
   return (
     <div className="flex flex-col justify-start items-start text-lg font-normal *:not-first:mt-8">
+
+      {/* Experience 1: Data Analyst */}
       <div className="flex flex-col justify-start items-start">
         <h3 className="text-2xl font-bold underline">
           Data Analyst - Peer Education Programs
@@ -188,7 +220,7 @@ const Experience = () => {
           </li>
           <li>
             Spearheaded the certification evaluation process for the CRLA
-            program, ensuring all mentors met rigorous quality standards
+            program, ensuring all mentors met rigorous quality standards.
           </li>
           <li>
             Introduced innovative tracking methodologies and data visualization
@@ -197,24 +229,48 @@ const Experience = () => {
           </li>
         </ul>
       </div>
+
+      {/* Experience 2: Software Developer Intern */}
+      <div className="flex flex-col justify-start items-start">
+        <h3 className="text-2xl font-bold underline">
+          Software Developer Intern – Vengai Software Solutions
+        </h3>
+        <h4 className="text-lg font-semibold">Hyderabad, India</h4>
+        <p className="text-base font-medium">September 2022 – March 2023</p>
+      </div>
+      <div className="flex flex-col justify-start items-start *:not-first:mt-4">
+        <ul className="flex flex-col justify-start items-start gap-2 list-disc list-inside">
+          <li>
+            Engineered and maintained responsive web applications using <strong>React, Node.js, and JavaScript</strong>, improving overall app performance and usability.
+          </li>
+          <li>
+            Developed secure, role-based authentication and session handling systems, significantly enhancing user data protection and access control.
+          </li>
+          <li>
+            Optimized frontend components and backend APIs, reducing page load times by <strong>30%</strong> and elevating user interaction speed.
+          </li>
+          <li>
+            Collaborated with cross-functional teams to deliver production-ready features, following Agile methodology and version control best practices.
+          </li>
+        </ul>
+      </div>
+
     </div>
   );
 };
+
 
 const projectItems = [
   {
     subheader: "Regale - The Recipe App",
     items: [
-      "Developed a dynamic recipe search web app using JavaScript, HTML, and SASS,integrating with the Forkify Recipe API to enable browsing over 100,000 recipes",
-      "Implemented dynamic ingredient adjustments based on serving size for personalized user experiences",
-      `Designed and integrated bookmarking functionality with local storage, allowing users to save and 
-                                    revisit their favorite recipes`,
-      `Employed MVC architecture and object-oriented principles, leveraging event handlers,
-                                    async/await, and DOM manipulation to build a responsive, smooth UI`,
-      `Added an API request feature to enable users to submit custom recipes with
-                                    ingredients`,
+      "Built Regale, a full-stack recipe search web app using React, Node.js, Express, MongoDB, HTML, and SCSS, where users can explore over 100,000 recipes by connecting to the Forkify Recipe API.",
+      "Added dynamic ingredient adjustments based on serving sizes to give users a more personalized cooking experience.",
+      "Implemented a bookmarking feature using localStorage so users can save and revisit their favorite recipes easily.",
+      "Followed the MVC architecture and used object-oriented principles, managing state with React and handling async API calls for a smooth and responsive interface.",
+      "Developed a feature that allows users to submit their own recipes with ingredients, which are stored and managed in a MongoDB backend."
     ],
-    link: "https://github.com/sharathkumarkarnati/Regale-app",
+    link: "https://regale-login.onrender.com",
   },
   {
     subheader: "Intrusion Detection System using ML",
@@ -365,7 +421,7 @@ const educationItems = [
   {
     subheader: "Master of Science in Computer Science",
     uni: "Washington State University, Pullman, Washington",
-    items: ["GPA: 3.80", "August 2023 - May 2025"],
+    items: ["GPA: 3.82", "August 2023 - May 2025"],
   },
   {
     subheader: "Bachelor of Technology in Electronics and Communication",
