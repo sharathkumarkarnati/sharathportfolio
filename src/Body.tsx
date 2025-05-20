@@ -37,7 +37,8 @@ export const Body = () => {
 
       <div className="flex self-stretch md:flex-1 flex-col justify-start items-start md:items-end order-1 md:order-2 mb-6 md:mb-0">
         <DownloadResumePdf />
-        <div className="hidden md:flex w-1/2 h-0.25 bg-primary m-0 mt-6 mb-6" />
+        {/* ✅ FIXED LINE */}
+        <div className="hidden md:flex w-1/2 h-[1px] bg-primary m-0 mt-6 mb-6"></div>
         <OverlayScrollbar
           scrollbarProps={{
             options: { overflow: { x: "scroll", y: "hidden" } },
@@ -47,12 +48,11 @@ export const Body = () => {
           <div className="flex flex-row md:flex-col justify-start items-center md:items-end text-base md:text-lg font-semibold uppercase *:not-first:ml-8 md:*:not-first:mt-8">
             {navItems.map((item) => (
               <div
+                key={item}
                 className={classNames(
-                  `flex cursor-pointer hover:bg-primary hover:text-bg-primary p-2 rounded-lg
-                      transition-colors duration-300 ease-in-out`,
+                  `flex cursor-pointer hover:bg-primary hover:text-bg-primary p-2 rounded-lg transition-colors duration-300 ease-in-out`,
                   active === item && "bg-primary text-bg-primary"
                 )}
-                key={item}
                 onClick={() => setNavItemIndex(navItems.indexOf(item))}
               >
                 {item}
