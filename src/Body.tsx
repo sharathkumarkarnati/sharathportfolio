@@ -120,7 +120,7 @@ const aboutItems = [
       "JavaScript",
       "TypeScript",
       "C++",
-      "C#"
+      "C#",
       "R",
       "HTML",
       "CSS",
